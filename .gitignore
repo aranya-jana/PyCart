@@ -1,0 +1,12 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+env/
+
+# Ignore environment variable files
+.env
+
+# Ignore SQLite DB (optional, if you don't want to push it)
+db.sqlite3
