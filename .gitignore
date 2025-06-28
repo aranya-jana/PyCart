@@ -13,3 +13,9 @@ db.sqlite3
 
 accounts/
 
+# Migrations
+migrations/
+
+# Static Media
+# static/img (We can keep this for now atleast)
+media/
