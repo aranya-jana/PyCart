@@ -17,5 +17,5 @@ accounts/
 migrations/
 
 # Static Media
-# static/img (We can keep this for now atleast)
+static/img/product-img/
 media/
