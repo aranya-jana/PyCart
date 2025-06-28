@@ -1,315 +1,171 @@
-
-{% extends 'base.html' %}
 {% load static %}
-{% block  content %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="max-age=604800" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- ##### Right Side Cart Area ##### -->
-    <div class="cart-bg-overlay"></div>
+  <title>GreatKart | One of the Biggest Online Shopping Platform</title>
 
-    <div class="right-side-cart-area">
+  <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
 
-        <!-- Cart Button -->
-        <div class="cart-button">
-            <a href="#" id="rightSideCart">
-                <img src="{% static 'img/core-img/bag.svg' %}" alt=""> <span>3</span>
+  <!-- jQuery -->
+  <script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
+
+  <!-- Bootstrap4 files -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+
+  <!-- Font awesome 5 -->
+  <link href="{% static 'fonts/fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles -->
+  <link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+  <!-- Custom JavaScript -->
+  <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // jQuery code
+    });
+  </script>
+</head>
+<body>
+
+<header class="section-header">
+  <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTop4">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="#" class="nav-link">English</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">USD</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li><a href="#" class="nav-link"><i class="fa fa-envelope"></i> Email</a></li>
+          <li><a href="#" class="nav-link"><i class="fa fa-phone"></i> Call us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="header-main border-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-md-3 col-6">
+          <a href="/" class="brand-wrap">
+            <img class="logo" src="{% static 'images/logo.png' %}">
+          </a>
+        </div>
+        <div class="col-lg col-sm col-md col-6 flex-grow-0">
+          <div class="category-wrap dropdown d-inline-block float-right">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bars"></i> All category
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Machinery / Mechanical Parts / Tools</a>
+              <a class="dropdown-item" href="#">Consumer Electronics / Home Appliances</a>
+              <a class="dropdown-item" href="#">Auto / Transportation</a>
+              <a class="dropdown-item" href="#">Apparel / Textiles / Timepieces</a>
+              <a class="dropdown-item" href="#">Home & Garden / Construction / Lights</a>
+              <a class="dropdown-item" href="#">Beauty & Personal Care / Health</a>
+            </div>
+          </div>
+        </div>
+        <a href="/store" class="btn btn-outline-primary">Store</a>
+        <div class="col-lg col-md-6 col-sm-12 col">
+          <form action="#" class="search">
+            <div class="input-group w-100">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
+          <div class="d-flex justify-content-end mb-3 mb-lg-0">
+            <div class="widget-header">
+              <small class="title text-muted">Welcome guest!</small>
+              <div>
+                <a href="/signin">Sign in</a> <span class="dark-transp">|</span>
+                <a href="/register">Register</a>
+              </div>
+            </div>
+            <a href="/cart" class="widget-header pl-3 ml-3">
+              <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+              <span class="badge badge-pill badge-danger notify">0</span>
             </a>
+          </div>
         </div>
-
-        <div class="cart-content d-flex">
-
-            <!-- Cart List Area -->
-            <div class="cart-list">
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="{% static 'img/product-img/product-1.jpg' %}" class="cart-thumb" alt="">
-                        <div class="cart-item-desc">
-                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="{% static 'img/product-img/product-2.jpg' %}" class="cart-thumb" alt="">
-                        <div class="cart-item-desc">
-                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="{% static 'img/product-img/product-3.jpg' %}" class="cart-thumb" alt="">
-                        <div class="cart-item-desc">
-                            <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Mango</span>
-                            <h6>Button Through Strap Mini Dress</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Cart Summary -->
-            <div class="cart-amount-summary">
-                <h2>Summary</h2>
-                <ul class="summary-table">
-                    <li><span>subtotal:</span> <span>$274.00</span></li>
-                    <li><span>delivery:</span> <span>Free</span></li>
-                    <li><span>discount:</span> <span>-15%</span></li>
-                    <li><span>total:</span> <span>$232.00</span></li>
-                </ul>
-                <div class="checkout-btn mt-100">
-                    <a href="checkout.html" class="btn essence-btn">check out</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <!-- ##### Right Side Cart End ##### -->
+  </section>
+</header>
 
-    <!-- ##### Welcome Area Start ##### -->
-        <section class="welcome_area bg-img background-overlay" style="background-image: url('{% static 'img/bg-img/bg-1.jpg' %}');">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12">
-                        <div class="hero-content">
-                            <h6>asoss</h6>
-                            <h2>New Collection</h2>
-                            <a href="#" class="btn essence-btn">view collection</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ##### Welcome Area End ##### -->
-
-        <!-- ##### Top Catagory Area Start ##### -->
-        <div class="top_catagory_area section-padding-80 clearfix">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <!-- Single Catagory -->
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                            style="background-image: url('{% static 'img/bg-img/bg-2.jpg' %}');">
-                            <div class="catagory-content">
-                                <a href="#">Clothing</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Catagory -->
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                            style="background-image: url('{% static 'img/bg-img/bg-3.jpg' %}');">
-                            <div class="catagory-content">
-                                <a href="#">Shoes</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Catagory -->
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                            style="background-image: url('{% static 'img/bg-img/bg-4.jpg' %}');">
-                            <div class="catagory-content">
-                                <a href="#">Accessories</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ##### Top Catagory Area End ##### -->
-            <!-- ##### CTA Area Start ##### -->
-    <div class="cta-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="cta-content bg-img background-overlay"
-                        style="background-image: url('{% static "img/bg-img/bg-5.jpg" %}');">
-                        <div class="h-100 d-flex align-items-center justify-content-end">
-                            <div class="cta--text">
-                                <h6>-60%</h6>
-                                <h2>Global Sale</h2>
-                                <a href="#" class="btn essence-btn">Buy Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ========================= MAIN BANNER ========================= -->
+<section class="section-intro padding-y-sm">
+  <div class="container">
+    <div class="intro-banner-wrap">
+      <img src="{% static 'images/banners/1.jpg' %}" class="img-fluid rounded">
     </div>
-    <!-- ##### CTA Area End ##### -->
+  </div>
+</section>
 
-    <!-- ##### New Arrivals Area Start ##### -->
-    <section class="new_arrivals_area section-padding-80 clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Popular Products</h2>
-                    </div>
-                </div>
-            </div>
+<!-- ========================= POPULAR PRODUCTS ========================= -->
+<section class="section-name padding-y-sm">
+  <div class="container">
+    <header class="section-heading">
+      <a href="/store" class="btn btn-outline-primary float-right">See all</a>
+      <h3 class="section-title">Popular products</h3>
+    </header>
+
+    <div class="row">
+      {% for i in '12345679' %}
+      <div class="col-md-3">
+        <div class="card card-product-grid">
+          <a href="/product-detail" class="img-wrap">
+            <img src="{% static 'images/items/'|add:i|add:'.jpg' %}">
+          </a>
+          <figcaption class="info-wrap">
+            <a href="/product-detail" class="title">Product name {{ i }}</a>
+            <div class="price mt-1">${{ 100|add:i }}</div>
+          </figcaption>
         </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="popular-products-slides owl-carousel">
-
-                        <!-- Single Product -->
-                        <div class="single-product-wrapper">
-                            <div class="product-img">
-                                <img src="{% static 'img/product-img/product-1.jpg' %}" alt="">
-                                <img class="hover-img" src="{% static 'img/product-img/product-2.jpg' %}" alt="">
-                                <div class="product-favourite">
-                                    <a href="#" class="favme fa fa-heart"></a>
-                                </div>
-                            </div>
-                            <div class="product-description">
-                                <span>topshop</span>
-                                <a href="single-product-details.html">
-                                    <h6>Knot Front Mini Dress</h6>
-                                </a>
-                                <p class="product-price">$80.00</p>
-                                <div class="hover-content">
-                                    <div class="add-to-cart-btn">
-                                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Product -->
-                        <div class="single-product-wrapper">
-                            <div class="product-img">
-                                <img src="{% static 'img/product-img/product-2.jpg' %}" alt="">
-                                <img class="hover-img" src="{% static 'img/product-img/product-3.jpg' %}" alt="">
-                                <div class="product-favourite">
-                                    <a href="#" class="favme fa fa-heart"></a>
-                                </div>
-                            </div>
-                            <div class="product-description">
-                                <span>topshop</span>
-                                <a href="single-product-details.html">
-                                    <h6>Poplin Displaced Wrap Dress</h6>
-                                </a>
-                                <p class="product-price">$80.00</p>
-                                <div class="hover-content">
-                                    <div class="add-to-cart-btn">
-                                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Product -->
-                        <div class="single-product-wrapper">
-                            <div class="product-img">
-                                <img src="{% static 'img/product-img/product-3.jpg' %}" alt="">
-                                <img class="hover-img" src="{% static 'img/product-img/product-4.jpg' %}" alt="">
-                                <div class="product-badge offer-badge">
-                                    <span>-30%</span>
-                                </div>
-                                <div class="product-favourite">
-                                    <a href="#" class="favme fa fa-heart"></a>
-                                </div>
-                            </div>
-                            <div class="product-description">
-                                <span>mango</span>
-                                <a href="single-product-details.html">
-                                    <h6>PETITE Crepe Wrap Mini Dress</h6>
-                                </a>
-                                <p class="product-price"><span class="old-price">$75.00</span> $55.00</p>
-                                <div class="hover-content">
-                                    <div class="add-to-cart-btn">
-                                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Product -->
-                        <div class="single-product-wrapper">
-                            <div class="product-img">
-                                <img src="{% static 'img/product-img/product-4.jpg' %}" alt="">
-                                <img class="hover-img" src="{% static 'img/product-img/product-5.jpg' %}" alt="">
-                                <div class="product-badge new-badge">
-                                    <span>New</span>
-                                </div>
-                                <div class="product-favourite">
-                                    <a href="#" class="favme fa fa-heart"></a>
-                                </div>
-                            </div>
-                            <div class="product-description">
-                                <span>mango</span>
-                                <a href="single-product-details.html">
-                                    <h6>PETITE Belted Jumper Dress</h6>
-                                </a>
-                                <p class="product-price">$80.00</p>
-                                <div class="hover-content">
-                                    <div class="add-to-cart-btn">
-                                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> <!-- .popular-products-slides -->
-                </div>
-            </div>
-        </div>
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top">
+  <div class="container">
+    <section class="footer-bottom border-top row">
+      <div class="col-md-2">
+        <p class="text-muted">&copy; 2025 Company name</p>
+      </div>
+      <div class="col-md-8 text-md-center">
+        <span class="px-2">info@pixsellz.io</span>
+        <span class="px-2">+879-332-9375</span>
+        <span class="px-2">Street name 123, Avenue abc</span>
+      </div>
+      <div class="col-md-2 text-md-right text-muted">
+        <i class="fab fa-lg fa-cc-visa"></i>
+        <i class="fab fa-lg fa-cc-paypal"></i>
+        <i class="fab fa-lg fa-cc-mastercard"></i>
+      </div>
     </section>
-<!-- ##### New Arrivals Area End ##### -->
+  </div>
+</footer>
 
-        <!-- ##### Brands Area Start ##### -->
-    <div class="brands-area d-flex align-items-center justify-content-between">
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand1.png' %}" alt="">
-        </div>
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand2.png' %}" alt="">
-        </div>
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand3.png' %}" alt="">
-        </div>
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand4.png' %}" alt="">
-        </div>
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand5.png' %}" alt="">
-        </div>
-        <div class="single-brands-logo">
-            <img src="{% static 'img/core-img/brand6.png' %}" alt="">
-        </div>
-    </div>
-    <!-- ##### Brands Area End ##### -->
-
-
-
-    <!-- ##### Scripts ##### -->
-    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/plugins.js' %}"></script>
-    <script src="{% static 'js/classy-nav.min.js' %}"></script>
-    <script src="{% static 'js/active.js' %}"></script>
 </body>
-
 </html>
-
-{% endblock %}
