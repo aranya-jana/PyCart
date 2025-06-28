@@ -11,8 +11,6 @@ env/
 # Ignore SQLite DB (optional, if you don't want to push it)
 db.sqlite3
 
-accounts/
-
 # Migrations
 migrations/
 
