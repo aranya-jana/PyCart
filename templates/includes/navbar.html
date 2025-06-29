@@ -1,114 +1,79 @@
 {% load static %}
+<header class="section-header">
+<nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTop4">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item dropdown">
+		 	<a href="#" class="nav-link">   English </a>
+		</li>
+		<li class="nav-item dropdown">
+			<a href="#" class="nav-link"> INR </a>
+		</li>
+    </ul>
+    <ul class="navbar-nav">
+		<li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
+		<li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
+	</ul>
+  </div>
+</div>
+</nav>
 
-<!-- ##### Header Area Start ##### -->
-    <header class="header_area">
-        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
-
-            <!-- Classy Menu -->
-            <nav class="classy-navbar" id="essenceNav">
-
-                <!-- Logo -->
-                <a class="nav-brand" href="{% url 'home' %}" style="background-color: transparent;">
-                    <img src="{% static 'img/core-img/PyCart1.png' %}" alt="PyCart Logo" style="max-height: 240px;">
-                </a>
-
-                <!-- Navbar Toggler -->
-                <div class="classy-navbar-toggler">
-                    <span class="navbarToggler"><span></span><span></span><span></span></span>
-                </div>
-
-                <!-- Menu -->
-                <div class="classy-menu">
-
-                    <!-- Close Button -->
-                    <div class="classycloseIcon">
-                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                    </div>
-
-                    <!-- Nav Start -->
-                    <div class="classynav">
-                        <ul>
-                            <li><a href="#">Shop</a>
-                                <div class="megamenu">
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Women's Collection</li>
-                                        <li><a href="shop.html">Dresses</a></li>
-                                        <li><a href="shop.html">Shirts</a></li>
-                                        <li><a href="shop.html">T-shirts</a></li>
-                                        <li><a href="shop.html">Rompers</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Men's Collection</li>
-                                        <li><a href="shop.html">T-Shirts</a></li>
-                                        <li><a href="shop.html">Polo</a></li>
-                                        <li><a href="shop.html">Shirts</a></li>
-                                        <li><a href="shop.html">Jackets</a></li>
-                                        <li><a href="shop.html">Trench</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li class="title">Kid's Collection</li>
-                                        <li><a href="shop.html">Dresses</a></li>
-                                        <li><a href="shop.html">Shirts</a></li>
-                                        <li><a href="shop.html">T-shirts</a></li>
-                                        <li><a href="shop.html">Jackets</a></li>
-                                        <li><a href="shop.html">Trench</a></li>
-                                    </ul>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="{% static 'img/bg-img/bg-6.jpg' %}" alt="Fashion Showcase">
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Store</a>
-                                {% comment %} <ul class="dropdown">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="single-product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="single-blog.html">Single Blog</a></li>
-                                    <li><a href="regular-page.html">Regular Page</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul> {% endcomment %}
-                            </li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- Nav End -->
-
-                </div>
-            </nav>
-
-            <!-- Header Meta Data -->
-            <div class="header-meta d-flex clearfix justify-content-end">
-
-                <!-- Search Area -->
-                <div class="search-area">
-                    <form action="#" method="post">
-                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-
-                <!-- Favourite Area -->
-                <div class="favourite-area">
-                    <a href="#"><img src="{% static 'img/core-img/heart.svg' %}" alt="Favorites"></a>
-                </div>
-
-                <!-- User Login Info -->
-                <div class="user-login-info">
-                    <a href="#"><img src="{% static 'img/core-img/user.svg' %}" alt="User Login"></a>
-                </div>
-
-                <!-- Cart Area -->
-                <div class="cart-area">
-                    <a href="#" id="essenceCartBtn">
-                        <img src="{% static 'img/core-img/bag.svg' %}" alt="Cart"> <span>3</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </header>
-    <!-- ##### Header Area End ##### -->
+<section class="header-main border-bottom">
+	<div class="container">
+<div class="row align-items-center">
+	<div class="col-lg-2 col-md-3 col-6">
+		<a href="./" class="brand-wrap">
+			<img class="logo" src="{% static 'images/logo.png' %}">
+		</a>
+	</div>
+	<div class="col-lg col-sm col-md col-6 flex-grow-0">
+		<div class="category-wrap dropdown d-inline-block float-right">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
+				<i class="fa fa-bars"></i> All category 
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Machinery / Mechanical Parts / Tools </a>
+				<a class="dropdown-item" href="#">Consumer Electronics / Home Appliances </a>
+				<a class="dropdown-item" href="#">Auto / Transportation</a>
+				<a class="dropdown-item" href="#">Apparel / Textiles / Timepieces </a>
+				<a class="dropdown-item" href="#">Home & Garden / Construction / Lights </a>
+				<a class="dropdown-item" href="#">Beauty & Personal Care / Health </a> 
+			</div>
+		</div>
+	</div>
+	<a href="./store.html" class="btn btn-outline-primary">Store</a>
+	<div class="col-lg col-md-6 col-sm-12 col">
+		<form action="#" class="search">
+			<div class="input-group w-100">
+			    <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+			    <div class="input-group-append">
+			      <button class="btn btn-primary" type="submit">
+			        <i class="fa fa-search"></i>
+			      </button>
+			    </div>
+		    </div>
+		</form>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
+		<div class="d-flex justify-content-end mb-3 mb-lg-0">
+			<div class="widget-header">
+				<small class="title text-muted">Welcome guest!</small>
+				<div> 
+					<a href="./signin.html">Sign in</a> <span class="dark-transp"> | </span>
+					<a href="./register.html"> Register</a>
+				</div>
+			</div>
+			<a href="./cart.html" class="widget-header pl-3 ml-3">
+				<div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+				<span class="badge badge-pill badge-danger notify">0</span>
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+</section>
+</header>
