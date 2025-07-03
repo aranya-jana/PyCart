@@ -12,10 +12,3 @@ env/
 db.sqlite3
 
 accounts/
-
-# Migrations
-migrations/
-
-# Static Media
-static/img/product-img/
-media/
